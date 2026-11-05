@@ -1,0 +1,3 @@
+# Copy to wifi.local.conf, which stays out of git
+CONFIG_APP_WIFI_SSID="my-network"
+CONFIG_APP_WIFI_PSK="my-password"

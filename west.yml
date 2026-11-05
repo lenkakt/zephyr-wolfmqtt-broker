@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+manifest:
+  self:
+    path: zephyr-wolfmqtt-broker
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+    - name: wolfssl
+      url-base: https://github.com/wolfSSL
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v4.4.2
+      import:
+        name-allowlist:
+          - hal_espressif
+          - mbedtls
+          - picolibc
+    - name: wolfMQTT
+      remote: wolfssl
+      revision: v2.2.0
+      path: modules/lib/wolfmqtt

@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+source "Kconfig.zephyr"
+
+config APP_WIFI_SSID
+	string "Wi-Fi network name"
+	depends on WIFI
+
+config APP_WIFI_PSK
+	string "Wi-Fi password"
+	depends on WIFI
+
+config APP_MEM_REPORT
+	bool "Print heap and stack use every 10 seconds"
+	depends on SYS_HEAP_RUNTIME_STATS && THREAD_ANALYZER
